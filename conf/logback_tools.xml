@@ -17,18 +17,20 @@
   -->
 
 <configuration>
+    <property name="log.home" value="/data/logs/rocketmq/tools"/>
+
     <appender name="DefaultAppender"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${user.home}/logs/rocketmqlogs/tools_default.log</file>
+        <file>${log.home}/logs/rocketmqlogs/tools_default.log</file>
         <append>true</append>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <fileNamePattern>${user.home}/logs/rocketmqlogs/otherdays/tools_default.%i.log
+            <fileNamePattern>${log.home}/logs/rocketmqlogs/otherdays/tools_default.%i.log
             </fileNamePattern>
             <minIndex>1</minIndex>
             <maxIndex>5</maxIndex>
         </rollingPolicy>
         <triggeringPolicy
-            class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+                class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
             <maxFileSize>100MB</maxFileSize>
         </triggeringPolicy>
         <encoder>
@@ -39,16 +41,16 @@
 
     <appender name="RocketmqToolsAppender_inner"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${user.home}/logs/rocketmqlogs/tools.log</file>
+        <file>${log.home}/logs/rocketmqlogs/tools.log</file>
         <append>true</append>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <fileNamePattern>${user.home}/logs/rocketmqlogs/otherdays/tools.%i.log
+            <fileNamePattern>${log.home}/logs/rocketmqlogs/otherdays/tools.%i.log
             </fileNamePattern>
             <minIndex>1</minIndex>
             <maxIndex>5</maxIndex>
         </rollingPolicy>
         <triggeringPolicy
-            class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+                class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
             <maxFileSize>100MB</maxFileSize>
         </triggeringPolicy>
         <encoder>
