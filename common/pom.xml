@@ -33,5 +33,10 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>rocketmq-remoting</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
     </dependencies>
 </project>
